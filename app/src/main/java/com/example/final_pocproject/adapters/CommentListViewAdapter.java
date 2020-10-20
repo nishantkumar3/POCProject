@@ -1,4 +1,4 @@
-package com.example.final_pocproject.Adapter;
+package com.example.final_pocproject.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,24 +8,22 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 
-
-import com.example.final_pocproject.Model.CommentList;
+import com.example.final_pocproject.model.Comments;
 import com.example.final_pocproject.R;
 
 import java.util.List;
 
 public class CommentListViewAdapter extends BaseAdapter {
 
-    public static List<CommentList> comments;   //list of comments for a post
+    public List<Comments> comments;
     public Context context;
     public LayoutInflater layoutInflater;
 
-    public CommentListViewAdapter(Context context,List<CommentList> comments){
+    public CommentListViewAdapter(Context context, List<Comments> comments) {
         this.context = context;
-        this.comments=comments;
+        this.comments = comments;
         layoutInflater = LayoutInflater.from(context);
     }
-
 
     @Override
     public int getCount() {
@@ -42,13 +40,13 @@ public class CommentListViewAdapter extends BaseAdapter {
         return position;
     }
 
-    private class ViewHolder {
+    private static class ViewHolder {
         protected TextView commentIdText;
         protected TextView commentNameText;
         protected TextView commentEmailText;
         protected TextView commentBodyText;
 
-        public ViewHolder(View view){
+        public ViewHolder(View view) {
             commentIdText = view.findViewById(R.id.comment_id);
             commentNameText = view.findViewById(R.id.comment_name);
             commentEmailText = view.findViewById(R.id.comment_email);
@@ -61,11 +59,11 @@ public class CommentListViewAdapter extends BaseAdapter {
         View view = convertView;
         ViewHolder holder = null;
 
-        if(view == null){
-            view = LayoutInflater.from(context).inflate(R.layout.comment_row_layout,parent,false);
+        if (view == null) {
+            view = LayoutInflater.from(context).inflate(R.layout.comment_row_layout, parent, false);
             holder = new ViewHolder(view);
             view.setTag(holder);
-        }else {
+        } else {
             holder = (ViewHolder) view.getTag();
         }
 

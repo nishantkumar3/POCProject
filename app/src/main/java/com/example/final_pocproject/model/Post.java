@@ -1,10 +1,10 @@
-package com.example.final_pocproject.Model;
+package com.example.final_pocproject.model;
 
 public class Post {
 
     private int id;
 
-    private  String title;
+    private String title;
 
     private String body;
 

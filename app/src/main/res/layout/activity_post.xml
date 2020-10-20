@@ -7,7 +7,7 @@
     android:background="@color/colorAccent"
     android:padding="8dp"
     android:orientation="vertical"
-    tools:context=".Activity.PostActivity">
+    tools:context=".activities.PostActivity">
 
     <ListView
         android:layout_width="match_parent"

@@ -1,10 +1,10 @@
-package com.example.final_pocproject.Model;
+package com.example.final_pocproject.model;
 
-public class CommentList {
+public class Comments {
 
     private int id;
 
-    private  String name;
+    private String name;
 
     private String email;
 
