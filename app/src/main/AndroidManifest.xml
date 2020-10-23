@@ -11,16 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".interfaces.MainActivityKt"></activity>
-        <activity android:name=".activities.CommentActivity" />
-        <activity android:name=".activities.PostActivity" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.CommentActivityKotlin"></activity>
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity android:name=".activities.PostActivityKotlin" />
+        <activity android:name=".activities.MainActivityKotlin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.CommentActivity" />
+        <activity android:name=".activities.PostActivity" />
+        <activity android:name=".activities.MainActivity" />
     </application>
 
 </manifest>

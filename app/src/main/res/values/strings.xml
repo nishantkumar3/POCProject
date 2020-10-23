@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Final_POCProject</string>
+    <string name="name">Name :</string>
+    <string name="email">Email :</string>
+    <string name="id">Id :</string>
+    <string name="title">Title :</string>
+    <string name="body">Body :</string>
+    <string name="login">login</string>
 </resources>

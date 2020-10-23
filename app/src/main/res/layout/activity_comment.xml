@@ -8,9 +8,8 @@
     tools:context=".activities.CommentActivity">
 
     <ListView
+        android:id="@+id/commentListView"
         android:layout_width="match_parent"
-
-        android:layout_height="match_parent"
-        android:id="@+id/commentListView"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

@@ -14,7 +14,7 @@
             android:id="@+id/post_id_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Id :"/>
+            android:text="@string/id" />
 
         <TextView
             android:id="@+id/post_id"
@@ -31,7 +31,7 @@
             android:id="@+id/post_title_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title :"/>
+            android:text="@string/title" />
 
         <TextView
             android:id="@+id/post_title"
@@ -48,7 +48,7 @@
             android:id="@+id/post_body_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Body :"/>
+            android:text="@string/body" />
 
         <TextView
             android:id="@+id/post_body"
