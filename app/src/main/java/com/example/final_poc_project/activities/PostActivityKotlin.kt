@@ -1,4 +1,4 @@
-package com.example.final_pocproject.activities
+package com.example.final_poc_project.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,12 +6,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.final_pocproject.*
-import com.example.final_pocproject.adapters.PostAdapter
-import com.example.final_pocproject.interfaces.PostCellClickListener
-import com.example.final_pocproject.interfaces.PostInterfaceKotlin
-import com.example.final_pocproject.model.PostKotlin
-import com.example.final_pocproject.utility.PostUtilityKotlin
+import com.example.final_poc_project.*
+import com.example.final_poc_project.adapters.PostAdapter
+import com.example.final_poc_project.interfaces.PostCellClickListener
+import com.example.final_poc_project.interfaces.PostInterfaceKotlin
+import com.example.final_poc_project.model.PostKotlin
+import com.example.final_poc_project.utility.PostUtilityKotlin
 
 
 class PostActivityKotlin : AppCompatActivity(), PostInterfaceKotlin, PostCellClickListener {

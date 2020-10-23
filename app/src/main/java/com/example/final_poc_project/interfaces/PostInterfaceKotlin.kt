@@ -1,6 +1,6 @@
-package com.example.final_pocproject.interfaces
+package com.example.final_poc_project.interfaces
 
-import com.example.final_pocproject.model.PostKotlin
+import com.example.final_poc_project.model.PostKotlin
 
 interface PostInterfaceKotlin {
     fun handleSuccessResponse(posts: List<PostKotlin>)

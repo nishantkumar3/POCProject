@@ -1,4 +1,4 @@
-package com.example.final_pocproject.model
+package com.example.final_poc_project.model
 
 data class CommentKotlin(
         val id: Int,

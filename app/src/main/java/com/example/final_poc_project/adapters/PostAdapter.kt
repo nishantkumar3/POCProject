@@ -1,13 +1,13 @@
-package com.example.final_pocproject.adapters
+package com.example.final_poc_project.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.final_pocproject.model.PostKotlin
-import com.example.final_pocproject.R
-import com.example.final_pocproject.interfaces.PostCellClickListener
+import com.example.final_poc_project.model.PostKotlin
+import com.example.final_poc_project.R
+import com.example.final_poc_project.interfaces.PostCellClickListener
 
 class PostAdapter(private val posts: List<PostKotlin>, private var postCellClickListener: PostCellClickListener) : RecyclerView.Adapter<PostAdapter.ViewHolder>() {
 

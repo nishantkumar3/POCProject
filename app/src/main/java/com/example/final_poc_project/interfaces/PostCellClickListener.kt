@@ -1,4 +1,4 @@
-package com.example.final_pocproject.interfaces
+package com.example.final_poc_project.interfaces
 
 interface PostCellClickListener {
     fun onCellClickListener(id: Any)

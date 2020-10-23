@@ -1,15 +1,15 @@
-package com.example.final_pocproject.activities
+package com.example.final_poc_project.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.final_pocproject.adapters.CommentAdapter
-import com.example.final_pocproject.R
-import com.example.final_pocproject.interfaces.CommentInterfaceKotlin
-import com.example.final_pocproject.model.CommentKotlin
-import com.example.final_pocproject.utility.CommentUtilityKotlin
+import com.example.final_poc_project.adapters.CommentAdapter
+import com.example.final_poc_project.R
+import com.example.final_poc_project.interfaces.CommentInterfaceKotlin
+import com.example.final_poc_project.model.CommentKotlin
+import com.example.final_poc_project.utility.CommentUtilityKotlin
 
 class CommentActivityKotlin : AppCompatActivity(), CommentInterfaceKotlin {
     override fun onCreate(savedInstanceState: Bundle?) {

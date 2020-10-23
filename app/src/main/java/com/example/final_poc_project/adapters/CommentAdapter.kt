@@ -1,12 +1,12 @@
-package com.example.final_pocproject.adapters
+package com.example.final_poc_project.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.final_pocproject.R
-import com.example.final_pocproject.model.CommentKotlin
+import com.example.final_poc_project.R
+import com.example.final_poc_project.model.CommentKotlin
 
 class CommentAdapter(private val comments: List<CommentKotlin>) : RecyclerView.Adapter<CommentAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

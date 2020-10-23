@@ -1,4 +1,4 @@
-package com.example.final_pocproject;
+package com.example.final_poc_project;
 
 import android.content.Context;
 

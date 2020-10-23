@@ -1,4 +1,4 @@
-package com.example.final_pocproject.api
+package com.example.final_poc_project.api
 
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit

@@ -1,10 +1,10 @@
-package com.example.final_pocproject.utility
+package com.example.final_poc_project.utility
 
 
-import com.example.final_pocproject.api.ApiInterfaceKotlin
-import com.example.final_pocproject.api.RetrofitClientKotlin
-import com.example.final_pocproject.interfaces.PostInterfaceKotlin
-import com.example.final_pocproject.model.PostKotlin
+import com.example.final_poc_project.api.ApiInterfaceKotlin
+import com.example.final_poc_project.api.RetrofitClientKotlin
+import com.example.final_poc_project.interfaces.PostInterfaceKotlin
+import com.example.final_poc_project.model.PostKotlin
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

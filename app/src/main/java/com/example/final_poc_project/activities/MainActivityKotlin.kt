@@ -1,4 +1,4 @@
-package com.example.final_pocproject.activities
+package com.example.final_poc_project.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
-import com.example.final_pocproject.*
-import com.example.final_pocproject.interfaces.UserInterfaceKotlin
-import com.example.final_pocproject.model.UserKotlin
-import com.example.final_pocproject.utility.UserUtilityKotlin
+import com.example.final_poc_project.*
+import com.example.final_poc_project.interfaces.UserInterfaceKotlin
+import com.example.final_poc_project.model.UserKotlin
+import com.example.final_poc_project.utility.UserUtilityKotlin
 import com.google.android.material.textfield.TextInputLayout
 
 

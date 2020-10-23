@@ -1,6 +1,6 @@
-package com.example.final_pocproject.interfaces
+package com.example.final_poc_project.interfaces
 
-import com.example.final_pocproject.model.UserKotlin
+import com.example.final_poc_project.model.UserKotlin
 
 interface UserInterfaceKotlin {
     fun handleSuccessResponse(users: List<UserKotlin>)
