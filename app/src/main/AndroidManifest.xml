@@ -13,9 +13,9 @@
         android:theme="@style/AppTheme">
         <uses-library android:name="com.google.android.maps" />
 
-        <activity android:name="com.example.final_poc_project.activities.CommentActivityKotlin" />
-        <activity android:name="com.example.final_poc_project.activities.PostActivityKotlin" />
-        <activity android:name="com.example.final_poc_project.activities.MainActivityKotlin">
+        <activity android:name="com.example.final_poc_project.activities.CommentActivity" />
+        <activity android:name="com.example.final_poc_project.activities.PostActivity" />
+        <activity android:name="com.example.final_poc_project.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

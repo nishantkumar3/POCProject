@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.final_poc_project.R
-import com.example.final_poc_project.model.CommentKotlin
+import com.example.final_poc_project.model.Comment
 
-class CommentAdapter(private val comments: List<CommentKotlin>) : RecyclerView.Adapter<CommentAdapter.ViewHolder>() {
+class CommentAdapter(private val comments: List<Comment>) : RecyclerView.Adapter<CommentAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val id: TextView = itemView.findViewById(R.id.comment_id)
         val name: TextView = itemView.findViewById(R.id.comment_name)

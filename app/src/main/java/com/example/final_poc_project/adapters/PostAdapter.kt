@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.final_poc_project.model.PostKotlin
+import com.example.final_poc_project.model.Post
 import com.example.final_poc_project.R
-import com.example.final_poc_project.interfaces.PostCellClickListener
+import com.example.final_poc_project.clickListener.PostCellClickListener
 
-class PostAdapter(private val posts: List<PostKotlin>, private var postCellClickListener: PostCellClickListener) : RecyclerView.Adapter<PostAdapter.ViewHolder>() {
+class PostAdapter(private val posts: List<Post>, private var postCellClickListener: PostCellClickListener) : RecyclerView.Adapter<PostAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val id: TextView = itemView.findViewById(R.id.post_id)

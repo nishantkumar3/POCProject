@@ -7,18 +7,18 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.example.final_poc_project.*
-import com.example.final_poc_project.interfaces.UserInterfaceKotlin
-import com.example.final_poc_project.model.UserKotlin
-import com.example.final_poc_project.utility.UserUtilityKotlin
+import com.example.final_poc_project.interfaces.UserInterface
+import com.example.final_poc_project.model.User
+import com.example.final_poc_project.api.UserApi
 import com.google.android.material.textfield.TextInputLayout
 
 
-class MainActivityKotlin : AppCompatActivity(), UserInterfaceKotlin {
+class MainActivity : AppCompatActivity(), UserInterface {
 
     lateinit var loginButton: Button
     lateinit var inputEmail: TextInputLayout
     private val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
-    lateinit var userUtilityKotlin: UserUtilityKotlin
+    lateinit var userApi: UserApi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,14 +26,14 @@ class MainActivityKotlin : AppCompatActivity(), UserInterfaceKotlin {
 
         loginButton = findViewById(R.id.loginButton)
         inputEmail = findViewById(R.id.email)
-        userUtilityKotlin = UserUtilityKotlin(this)
+        userApi = UserApi(this)
 
         loginButton.setOnClickListener(View.OnClickListener {
 
             val emailId: String = inputEmail.editText?.text.toString().trim()
 
             if (validEmail(emailId))
-                userUtilityKotlin.getUser()
+                userApi.getUser()
         })
 
     }
@@ -52,7 +52,7 @@ class MainActivityKotlin : AppCompatActivity(), UserInterfaceKotlin {
         return isValid
     }
 
-    override fun handleSuccessResponse(users: List<UserKotlin>) {
+    override fun handleSuccessResponse(users: List<User>) {
 
         val emailEntered: String = inputEmail.editText?.text.toString()
 
@@ -63,16 +63,16 @@ class MainActivityKotlin : AppCompatActivity(), UserInterfaceKotlin {
             }
 
         if (userId != 0) {
-            val intent = Intent(this@MainActivityKotlin, PostActivityKotlin::class.java)
+            val intent = Intent(this@MainActivity, PostActivity::class.java)
             intent.putExtra("USER_ID", userId)
             startActivity(intent)
         } else {
-            Toast.makeText(this@MainActivityKotlin, "Email id not found", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity, "Email id not found", Toast.LENGTH_SHORT).show()
         }
     }
 
     override fun handleFailure(t: Throwable) {
-        Toast.makeText(this@MainActivityKotlin, t.message, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this@MainActivity, t.message, Toast.LENGTH_SHORT).show()
     }
 }
 

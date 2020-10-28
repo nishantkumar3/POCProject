@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.final_poc_project.adapters.CommentAdapter
 import com.example.final_poc_project.R
-import com.example.final_poc_project.interfaces.CommentInterfaceKotlin
-import com.example.final_poc_project.model.CommentKotlin
-import com.example.final_poc_project.utility.CommentUtilityKotlin
+import com.example.final_poc_project.interfaces.CommentInterface
+import com.example.final_poc_project.model.Comment
+import com.example.final_poc_project.api.CommentApi
 
-class CommentActivityKotlin : AppCompatActivity(), CommentInterfaceKotlin {
+class CommentActivity : AppCompatActivity(), CommentInterface {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_comment_kotlin)
@@ -19,11 +19,11 @@ class CommentActivityKotlin : AppCompatActivity(), CommentInterfaceKotlin {
         val extras = intent.extras ?: return
         val postId = extras.get("POST_ID")
 
-        val commentUtilityKotlin = CommentUtilityKotlin(this)
+        val commentUtilityKotlin = CommentApi(this)
         commentUtilityKotlin.getComments(Integer.parseInt(postId.toString()))
     }
 
-    override fun handleSuccessResponse(comments: List<CommentKotlin>) {
+    override fun handleSuccessResponse(comments: List<Comment>) {
         var recyclerView: RecyclerView = findViewById(R.id.commentRecyclerView)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
