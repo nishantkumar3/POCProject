@@ -6,4 +6,8 @@
     <string name="title">Title :</string>
     <string name="body">Body :</string>
     <string name="login">login</string>
+    <string name="emailErrorMessage">Email field can\'t be empty</string>
+    <string name="invalidEmail">Invalid Email Address</string>
+    <string name="emailNotFound">Email id not found</string>
+
 </resources>

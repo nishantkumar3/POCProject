@@ -18,7 +18,7 @@ class PostAdapter(private val posts: List<Post>, private var postCellClickListen
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.post_row_layout_kotlin, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.post_row, parent, false)
         return ViewHolder(view)
     }
 
