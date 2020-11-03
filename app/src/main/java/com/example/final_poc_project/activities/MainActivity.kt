@@ -10,6 +10,7 @@ import com.example.final_poc_project.*
 import com.example.final_poc_project.interfaces.UserInterface
 import com.example.final_poc_project.model.User
 import com.example.final_poc_project.api.UserApi
+import com.example.final_poc_project.sessionmanagement.SessionManager
 import com.google.android.material.textfield.TextInputLayout
 
 

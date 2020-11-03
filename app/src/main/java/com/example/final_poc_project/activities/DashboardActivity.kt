@@ -2,14 +2,12 @@ package com.example.final_poc_project.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import com.example.final_poc_project.CommentFragment
-import com.example.final_poc_project.PostFragment
+import com.example.final_poc_project.fragments.PostFragment
 import com.example.final_poc_project.R
-import com.example.final_poc_project.SessionManager
+import com.example.final_poc_project.sessionmanagement.SessionManager
 
 class DashboardActivity : AppCompatActivity() {
 

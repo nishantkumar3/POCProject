@@ -1,7 +1,6 @@
-package com.example.final_poc_project
+package com.example.final_poc_project.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.final_poc_project.R
+import com.example.final_poc_project.sessionmanagement.SessionManager
 import com.example.final_poc_project.adapters.PostAdapter
 import com.example.final_poc_project.api.PostApi
 import com.example.final_poc_project.clickListener.PostCellClickListener

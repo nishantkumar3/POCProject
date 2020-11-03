@@ -1,4 +1,4 @@
-package com.example.final_poc_project
+package com.example.final_poc_project.sessionmanagement
 
 import android.annotation.SuppressLint
 import android.content.Context
