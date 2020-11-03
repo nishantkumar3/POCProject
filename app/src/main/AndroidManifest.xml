@@ -17,9 +17,8 @@
 
         <uses-library android:name="com.google.android.maps" />
 
-        <activity android:name=".activities.CommentActivity" />
-        <activity android:name=".activities.PostActivity" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
