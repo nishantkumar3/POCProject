@@ -62,7 +62,7 @@ class SessionManager {
 
         val user: Map<String,String> = HashMap<String,String>()
         (user as HashMap)[KEY_EMAIL] = pref.getString(KEY_EMAIL,null)!!
-        (user as HashMap)[KEY_USERID] = (pref.getInt(KEY_USERID, 0)).toString()
+        user[KEY_USERID] = (pref.getInt(KEY_USERID, 0)).toString()
         return user
     }
 

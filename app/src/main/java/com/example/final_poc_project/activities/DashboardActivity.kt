@@ -23,8 +23,6 @@ class DashboardActivity : AppCompatActivity() {
         val fragment = PostFragment()
         fragmentTransaction.replace(R.id.fragmentContainer, fragment)
         fragmentTransaction.commit()
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
