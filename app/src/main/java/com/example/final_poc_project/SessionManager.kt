@@ -1,5 +1,6 @@
 package com.example.final_poc_project
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -10,8 +11,9 @@ class SessionManager {
     var pref: SharedPreferences
     var editor: SharedPreferences.Editor
     var context: Context
-    var PRIVATE_MODE: Int = 0
+    private var PRIVATE_MODE: Int = 0
 
+    @SuppressLint("CommitPrefEdits")
     constructor(context: Context) {
         this.context = context
         pref = context.getSharedPreferences(PREF_NAME, PRIVATE_MODE)
@@ -20,12 +22,11 @@ class SessionManager {
 
     companion object {
 
-        val PREF_NAME: String = "FinalPocProject"
-        val IS_LOGIN: String = "isLoggedIn"
-        val KEY_EMAIL: String = "email"
-        val KEY_USERID: String = "userId"
-        val STATUS_ID : String = "screenStatus"
-        val KEY_POSTID : String = "postId"
+        const val PREF_NAME: String = "FinalPocProject"
+        const val IS_LOGIN: String = "isLoggedIn"
+        const val KEY_EMAIL: String = "email"
+        const val KEY_USERID: String = "userId"
+        const val KEY_POSTID : String = "postId"
     }
 
     fun createLoginSession(email: String, userId: Int) {
@@ -33,7 +34,6 @@ class SessionManager {
         editor.putBoolean(IS_LOGIN,true)
         editor.putString(KEY_EMAIL,email)
         editor.putInt(KEY_USERID,userId)
-        editor.putInt(STATUS_ID,0)
         editor.apply()
     }
 
@@ -51,7 +51,7 @@ class SessionManager {
         editor.clear()
         editor.apply()
 
-        var intent : Intent = Intent(context,MainActivity::class.java)
+        val intent : Intent = Intent(context,MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         context.startActivity(intent)
@@ -77,13 +77,5 @@ class SessionManager {
 
     fun getPostDetails() : Int{
         return pref.getInt(KEY_POSTID,0)
-    }
-    fun changeScreenStatus(screeStatus : Int){
-        editor.putInt(STATUS_ID,screeStatus)
-        editor.apply()
-    }
-
-    fun screenStatus() : Int{
-        return pref.getInt(STATUS_ID,0)
     }
 }

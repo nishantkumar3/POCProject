@@ -11,11 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:noHistory="true"></activity>
+
         <uses-library android:name="com.google.android.maps" />
 
-        <activity android:name="com.example.final_poc_project.activities.CommentActivity" />
-        <activity android:name="com.example.final_poc_project.activities.PostActivity" />
-        <activity android:name="com.example.final_poc_project.activities.MainActivity">
+        <activity android:name=".activities.CommentActivity" />
+        <activity android:name=".activities.PostActivity" />
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

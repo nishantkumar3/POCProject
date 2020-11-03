@@ -27,10 +27,7 @@ class CommentActivity : AppCompatActivity(), CommentInterface {
 
         sessionManager = SessionManager(applicationContext)
         sessionManager.checkLogin()
-        sessionManager.changeScreenStatus(2)
-
-        //   val extras = intent.extras ?: return
-        //    val postId  = extras.getInt("POST_ID")
+      //  sessionManager.changeScreenStatus(2)
 
         val postId = sessionManager.getPostDetails()
 
@@ -40,7 +37,7 @@ class CommentActivity : AppCompatActivity(), CommentInterface {
 
     override fun onBackPressed() {
         val intent = Intent(this, PostActivity::class.java)
-        sessionManager.changeScreenStatus(1)
+     //   sessionManager.changeScreenStatus(1)
         startActivity(intent)
         finish()
     }

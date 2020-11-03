@@ -1,8 +1,6 @@
 package com.example.final_poc_project.activities
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,7 +11,6 @@ import com.example.final_poc_project.interfaces.UserInterface
 import com.example.final_poc_project.model.User
 import com.example.final_poc_project.api.UserApi
 import com.google.android.material.textfield.TextInputLayout
-
 
 
 class MainActivity : AppCompatActivity(), UserInterface {
@@ -29,28 +26,15 @@ class MainActivity : AppCompatActivity(), UserInterface {
         setContentView(R.layout.activity_main)
 
         sessionManager = SessionManager(applicationContext)
-        if(sessionManager.isLoggedIn()){
-            if(sessionManager.screenStatus() == 1){
-                val intent: Intent = Intent(applicationContext,PostActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(intent)
-                finish()
-            }
-           if(sessionManager.screenStatus()==2){
-               val intent: Intent = Intent(applicationContext,CommentActivity::class.java)
-               intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-               intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-               startActivity(intent)
-               finish()
-           }
-
+        if (sessionManager.isLoggedIn()) {
+            val intent: Intent = Intent(this, DashboardActivity::class.java)
+            finish()
+            startActivity(intent)
         }
 
         loginButton = findViewById(R.id.loginButton)
         inputEmail = findViewById(R.id.email)
         userApi = UserApi(this)
-
 
         loginButton.setOnClickListener(View.OnClickListener {
 
@@ -59,8 +43,8 @@ class MainActivity : AppCompatActivity(), UserInterface {
             if (validEmail(emailId))
                 userApi.getUser()
         })
-
     }
+
 
     private fun validEmail(emailId: String): Boolean {
         var isValid: Boolean = false
@@ -75,7 +59,6 @@ class MainActivity : AppCompatActivity(), UserInterface {
         return isValid
     }
 
-
     override fun handleSuccessResponse(users: List<User>) {
         val emailEntered: String = inputEmail.editText?.text.toString()
         var userId: Int = 0
@@ -85,8 +68,9 @@ class MainActivity : AppCompatActivity(), UserInterface {
             }
 
         if (userId != 0) {
-            sessionManager.createLoginSession(emailEntered,userId)
-            val intent = Intent(this@MainActivity, PostActivity::class.java)
+            sessionManager.createLoginSession(emailEntered, userId)
+            val intent = Intent(this@MainActivity, DashboardActivity::class.java)
+            finish()
             startActivity(intent)
         } else {
             inputEmail.error = getString(R.string.emailNotFound)

@@ -27,10 +27,10 @@ class PostActivity : AppCompatActivity(), PostInterface, PostCellClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post)
 
-        sessionManager = SessionManager(applicationContext)
 
+        sessionManager = SessionManager(applicationContext)
         sessionManager.checkLogin()
-        sessionManager.changeScreenStatus(1)
+      //  sessionManager.changeScreenStatus(1)
 
         val user: HashMap<String,String> = sessionManager.getUserDetails()
         val userId = user[SessionManager.KEY_USERID]!!
@@ -63,9 +63,17 @@ class PostActivity : AppCompatActivity(), PostInterface, PostCellClickListener {
 
     override fun onCellClickListener(id: Any) {
         sessionManager.createPostSession(id as Int)
-        val intent = Intent(this@PostActivity, CommentActivity::class.java)
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragment = CommentFragment()
+        fragmentTransaction.replace(R.id.postLayout, fragment)
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.commit()
+
+     //   sessionManager.createPostSession(id as Int)
+    //    val intent = Intent(this@PostActivity, CommentActivity::class.java)
        //intent.putExtra("POST_ID", id as Int)
-        startActivity(intent)
+     //   startActivity(intent)
     }
 
 }
