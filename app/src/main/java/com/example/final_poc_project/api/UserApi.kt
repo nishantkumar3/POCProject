@@ -15,8 +15,10 @@ class UserApi(private val userInterface: UserInterface) {
         val call: Call<List<User>> = apiInterface.getUsers()
         call.enqueue(object : Callback<List<User>> {
             override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
-                if (!response.isSuccessful)
+                if (!response.isSuccessful) {
+                    userInterface.responseNotStressful(response.code())
                     return
+                }
                 userInterface.handleSuccessResponse(response.body()!!)
             }
 

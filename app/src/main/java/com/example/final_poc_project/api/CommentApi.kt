@@ -15,8 +15,11 @@ class CommentApi(private val commentInterface: CommentInterface) {
         val call: Call<List<Comment>> = apiInterface.getComments(postId)
         call.enqueue(object : Callback<List<Comment>> {
             override fun onResponse(call: Call<List<Comment>>, response: Response<List<Comment>>) {
-                if (!response.isSuccessful)
+                if (!response.isSuccessful){
+                    commentInterface.responseNotStressful(response.code() )
                     return
+                }
+
                 commentInterface.handleSuccessResponse(response.body()!!)
             }
 

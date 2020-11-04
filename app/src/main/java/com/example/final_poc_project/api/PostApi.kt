@@ -16,8 +16,11 @@ class PostApi(private val postInterface: PostInterface) {
         val call: Call<List<Post>> = apiInterface.getPosts(userId)
         call.enqueue(object : Callback<List<Post>> {
             override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
-                if (!response.isSuccessful)
+                if (!response.isSuccessful) {
+                    postInterface.responseNotStressful(response.code())
                     return
+                }
+
                 postInterface.handleSuccessResponse(response.body()!!)
             }
 

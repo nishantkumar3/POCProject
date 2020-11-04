@@ -48,4 +48,9 @@ class CommentFragment : Fragment(), CommentInterface {
         Toast.makeText(activity!!.applicationContext, t.message, Toast.LENGTH_SHORT).show()
     }
 
+    override fun responseNotStressful(responseCode: Int) {
+        Toast.makeText(activity?.applicationContext, """Code : $responseCode""", Toast.LENGTH_SHORT).show()
+
+    }
+
 }

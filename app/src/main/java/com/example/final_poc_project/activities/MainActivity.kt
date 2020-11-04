@@ -81,5 +81,9 @@ class MainActivity : AppCompatActivity(), UserInterface {
     override fun handleFailure(t: Throwable) {
         Toast.makeText(this@MainActivity, t.message, Toast.LENGTH_SHORT).show()
     }
+
+    override fun responseNotStressful(responseCode: Int) {
+        Toast.makeText(this@MainActivity, """Code : $responseCode""", Toast.LENGTH_SHORT).show()
+    }
 }
 

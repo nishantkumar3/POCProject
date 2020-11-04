@@ -14,6 +14,7 @@ class SessionManager {
     private var PRIVATE_MODE: Int = 0
 
 
+    @SuppressLint("CommitPrefEdits")
     constructor(context: Context) {
         this.context = context
         pref = context.getSharedPreferences(PREF_NAME, PRIVATE_MODE)

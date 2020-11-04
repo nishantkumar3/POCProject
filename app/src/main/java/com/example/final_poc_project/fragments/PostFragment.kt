@@ -48,6 +48,11 @@ class PostFragment : Fragment(), PostInterface, PostCellClickListener {
         Toast.makeText(activity!!.applicationContext, t.message, Toast.LENGTH_SHORT).show()
     }
 
+    override fun responseNotStressful(responseCode: Int) {
+        Toast.makeText(activity?.applicationContext, """Code : $responseCode""", Toast.LENGTH_SHORT).show()
+
+    }
+
     override fun onCellClickListener(id: Any) {
         sessionManager.createPostSession(id as Int)
         val fragmentManager = fragmentManager
