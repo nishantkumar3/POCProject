@@ -13,8 +13,8 @@ class RetrofitClientKotlin {
                     .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
                     .build()
         }
-
         private const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+
     }
 
 

@@ -13,7 +13,7 @@ class SessionManager {
     var context: Context
     private var PRIVATE_MODE: Int = 0
 
-    @SuppressLint("CommitPrefEdits")
+
     constructor(context: Context) {
         this.context = context
         pref = context.getSharedPreferences(PREF_NAME, PRIVATE_MODE)
@@ -30,6 +30,7 @@ class SessionManager {
     }
 
     fun createLoginSession(email: String, userId: Int) {
+
 
         editor.putBoolean(IS_LOGIN,true)
         editor.putString(KEY_EMAIL,email)

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Final_POCProject</string>
     <string name="name">Name :</string>
-    <string name="email">Email :</string>
+    <string name="email">EMAIL</string>
     <string name="id">Id :</string>
     <string name="title">Title :</string>
     <string name="body">Body :</string>
@@ -9,5 +9,8 @@
     <string name="emailErrorMessage">Email field can\'t be empty</string>
     <string name="invalidEmail">Invalid Email Address</string>
     <string name="emailNotFound">Email id not found</string>
+    <string name="welcome">Welcome</string>
+    <string name="please_enter_your_email">Please enter your email</string>
+
 
 </resources>

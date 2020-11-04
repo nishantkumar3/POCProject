@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Welcome"
+                android:text="@string/welcome"
                 android:textColor="#363A43"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Please enter your email"
+                android:text="@string/please_enter_your_email"
                 android:textColor="#7A8089"
                 android:textSize="16sp" />
 
@@ -53,7 +53,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="EMAIL"
+                    android:hint="@string/email"
                     android:inputType="textEmailAddress"
                     android:textColor="#363A43"
                     android:textColorHint="#7A8089" />
@@ -68,7 +68,7 @@
                 android:background="@color/colorPrimary"
                 android:text="@string/login"
                 android:textColor="@android:color/white"
-                android:textSize="18dp" />
+                android:textSize="18sp" />
 
         </LinearLayout>
 
