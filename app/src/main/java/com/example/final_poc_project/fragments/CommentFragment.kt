@@ -27,7 +27,7 @@ class CommentFragment : Fragment(), CommentInterface {
         val view: View = inflater.inflate(R.layout.fragment_comment, container, false)
         recyclerView = view.findViewById(R.id.commentRecyclerView)
 
-        sessionManager = SessionManager(activity!!.applicationContext)
+        sessionManager = activity?.applicationContext?.let { SessionManager(it) }!!
         sessionManager.checkLogin()
 
         val postId = sessionManager.getPostDetails()
@@ -45,7 +45,7 @@ class CommentFragment : Fragment(), CommentInterface {
     }
 
     override fun handleFailure(t: Throwable) {
-        Toast.makeText(activity!!.applicationContext, t.message, Toast.LENGTH_SHORT).show()
+        Toast.makeText(activity?.applicationContext, t.message, Toast.LENGTH_SHORT).show()
     }
 
     override fun responseNotStressful(responseCode: Int) {

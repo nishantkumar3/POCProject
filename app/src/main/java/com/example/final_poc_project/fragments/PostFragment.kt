@@ -28,7 +28,7 @@ class PostFragment : Fragment(), PostInterface, PostCellClickListener {
         val view: View = inflater.inflate(R.layout.fragment_post, container, false)
         recyclerView = view.findViewById(R.id.postRecyclerView)
 
-        sessionManager = SessionManager(activity!!.applicationContext)
+        sessionManager = activity?.applicationContext?.let { SessionManager(it) }!!
         sessionManager.checkLogin()
 
         val user: HashMap<String, String> = sessionManager.getUserDetails()
@@ -40,12 +40,12 @@ class PostFragment : Fragment(), PostInterface, PostCellClickListener {
     }
 
     override fun handleSuccessResponse(posts: List<Post>) {
-        recyclerView.layoutManager = LinearLayoutManager(activity!!.application)
+        recyclerView.layoutManager = LinearLayoutManager(activity?.application)
         recyclerView.adapter = PostAdapter(posts, this)
     }
 
     override fun handleFailure(t: Throwable) {
-        Toast.makeText(activity!!.applicationContext, t.message, Toast.LENGTH_SHORT).show()
+        Toast.makeText(activity?.applicationContext, t.message, Toast.LENGTH_SHORT).show()
     }
 
     override fun responseNotStressful(responseCode: Int) {

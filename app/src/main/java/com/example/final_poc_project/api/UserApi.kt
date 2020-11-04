@@ -19,7 +19,7 @@ class UserApi(private val userInterface: UserInterface) {
                     userInterface.responseNotStressful(response.code())
                     return
                 }
-                userInterface.handleSuccessResponse(response.body()!!)
+                response.body()?.let { userInterface.handleSuccessResponse(it) }
             }
 
             override fun onFailure(call: Call<List<User>>, t: Throwable) {

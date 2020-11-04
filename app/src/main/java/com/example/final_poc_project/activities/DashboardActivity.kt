@@ -30,6 +30,7 @@ class DashboardActivity : AppCompatActivity() {
         inflater.inflate(R.menu.main_menu, menu)
         return true
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         sessionManager.logoutUser()
         return super.onOptionsItemSelected(item)

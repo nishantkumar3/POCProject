@@ -21,7 +21,7 @@ class PostApi(private val postInterface: PostInterface) {
                     return
                 }
 
-                postInterface.handleSuccessResponse(response.body()!!)
+                response.body()?.let { postInterface.handleSuccessResponse(it) }
             }
 
             override fun onFailure(call: Call<List<Post>>, t: Throwable) {
