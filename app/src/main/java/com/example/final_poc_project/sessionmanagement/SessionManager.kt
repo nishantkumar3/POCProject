@@ -8,7 +8,7 @@ import com.example.final_poc_project.activities.MainActivity
 
 class SessionManager(var context: Context) {
 
-    var pref: SharedPreferences
+    private var pref: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
     private var PRIVATE_MODE: Int = 0
 
@@ -38,7 +38,7 @@ class SessionManager(var context: Context) {
 
     fun checkLogin() {
         if (!this.isLoggedIn()) {
-            val intent: Intent = Intent(context, MainActivity::class.java)
+            val intent = Intent(context, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(intent)
@@ -50,7 +50,7 @@ class SessionManager(var context: Context) {
         editor.clear()
         editor.apply()
 
-        val intent: Intent = Intent(context, MainActivity::class.java)
+        val intent = Intent(context, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         context.startActivity(intent)
