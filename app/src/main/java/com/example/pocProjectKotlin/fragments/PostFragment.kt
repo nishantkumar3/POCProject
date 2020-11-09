@@ -58,7 +58,7 @@ class PostFragment : Fragment(), PostInterface, PostCellClickListener {
         val fragmentManager = fragmentManager
         val fragmentTransaction = fragmentManager!!.beginTransaction()
         val fragment = CommentFragment()
-        fragmentTransaction.replace(R.id.fragmentContainer, fragment)
+        fragmentTransaction.replace(R.id.fragment_container, fragment)
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
 

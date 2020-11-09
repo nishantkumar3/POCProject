@@ -12,13 +12,13 @@ import com.example.pocProjectKotlin.clickListener.PostCellClickListener
 class PostAdapter(private val posts: List<Post>, private var postCellClickListener: PostCellClickListener) : RecyclerView.Adapter<PostAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val id: TextView = itemView.findViewById(R.id.post_id)
-        val title: TextView = itemView.findViewById(R.id.post_title)
-        val body: TextView = itemView.findViewById(R.id.post_body)
+        val id: TextView = itemView.findViewById(R.id.postId)
+        val title: TextView = itemView.findViewById(R.id.postTitle)
+        val body: TextView = itemView.findViewById(R.id.postBody)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.post_row, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.post_row_layout, parent, false)
         return ViewHolder(view)
     }
 

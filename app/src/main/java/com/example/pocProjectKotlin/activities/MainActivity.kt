@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), UserInterface {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_layout)
 
         sessionManager = SessionManager(applicationContext)
         if (sessionManager.isLoggedIn()) {
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity(), UserInterface {
 
     override fun handleSuccessResponse(users: List<User>) {
         val emailEntered: String = inputEmail.editText?.text.toString()
-        var userId: Int = 0
+        var userId = 0
         for (i: Int in users.indices)
             if (users[i].email.equals(emailEntered, true)) {
                 userId = users[i].id

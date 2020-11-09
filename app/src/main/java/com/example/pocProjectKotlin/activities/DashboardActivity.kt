@@ -14,14 +14,14 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var sessionManager: SessionManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard)
+        setContentView(R.layout.activity_dashboard_layout)
 
         sessionManager = SessionManager(applicationContext)
 
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         val fragment = PostFragment()
-        fragmentTransaction.replace(R.id.fragmentContainer, fragment)
+        fragmentTransaction.replace(R.id.fragment_container, fragment)
         fragmentTransaction.commit()
     }
 

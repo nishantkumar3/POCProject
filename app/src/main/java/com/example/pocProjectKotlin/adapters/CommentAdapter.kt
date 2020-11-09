@@ -10,14 +10,14 @@ import com.example.pocProjectKotlin.model.Comment
 
 class CommentAdapter(private val comments: List<Comment>) : RecyclerView.Adapter<CommentAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val id: TextView = itemView.findViewById(R.id.comment_id)
-        val name: TextView = itemView.findViewById(R.id.comment_name)
-        val email: TextView = itemView.findViewById(R.id.comment_email)
-        val body: TextView = itemView.findViewById(R.id.comment_body)
+        val id: TextView = itemView.findViewById(R.id.commentId)
+        val name: TextView = itemView.findViewById(R.id.commentName)
+        val email: TextView = itemView.findViewById(R.id.commentEmail)
+        val body: TextView = itemView.findViewById(R.id.commentBody)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.comment_row, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.comment_row_layout, parent, false)
         return ViewHolder(view)
     }
 

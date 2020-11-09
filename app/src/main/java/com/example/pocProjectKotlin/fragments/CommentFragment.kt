@@ -40,7 +40,7 @@ class CommentFragment : Fragment(), CommentInterface {
 
 
     override fun handleSuccessResponse(comments: List<Comment>) {
-        recyclerView.layoutManager = LinearLayoutManager(activity!!.application)
+        recyclerView.layoutManager = LinearLayoutManager(activity?.application)
         recyclerView.adapter = CommentAdapter(comments)
     }
 
